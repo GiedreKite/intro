@@ -104,12 +104,16 @@ console.log('---------');
 
 console.clear();
 
+// ND 138 kombinacijos
+
 console.log(true && true && true && true);
 console.log(true && true && true && false);
 console.log(true && true && false && true);
 console.log(true && true && false && false);
 console.log(true && false && false && true);
 console.log(true && false && false && false);
+console.log(false && false && false && true);
+console.log(false && false && false && false);
 
 
 console.clear();
