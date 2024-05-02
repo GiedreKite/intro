@@ -38,7 +38,7 @@ const kabutes12_2 = "Vienguba (')  ir dvyguba (\") kabutes."
 const kabutes12_3 = 'Vienguba (\')  ir dvyguba (\") kabutes.';
 const kabutes12_4 = "Vienguba (\')  ir dvyguba (\") kabutes."
 
-
+// escaping
 console.log(kabutes12_1);
 console.log(kabutes12_2);
 console.log(kabutes12_3);
@@ -66,3 +66,5 @@ console.log(b+z+10);
 console.log(c+z);
 console.log(d+z+90);
 console.log(e+z);
+
+
