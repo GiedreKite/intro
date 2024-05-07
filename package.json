@@ -4,7 +4,11 @@
   "description": "kazkas apie kazka",
   "main": "index.js",
   "scripts": {
-    "function": "node --watch ./js/duomenys/function.js",
+    "nd": "node --watch ./js/duomenys/nd.js",
+    "ciklai": "node --watch ./js/ciklai/ciklai.js",
+    "array": "node --watch ./js/duomenys/array.js",
+    "if": "node --watch ./js/palyginimai/if.js",
+    "function": "node --watch ./js/funkcijos/function.js",
     "boolean": "node --watch ./js/duomenys/boolean.js",
     "string": "node --watch ./js/duomenys/string.js",
     "number": "node --watch ./js/duomenys/number.js",

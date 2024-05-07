@@ -129,6 +129,33 @@ console.log(y);
 y %=3;
 console.log(y);
 
+console.clear();
+
+let makaronai = 2;
+console.log(makaronai);
+
+makaronai += 2;
+console.log(makaronai);
+
+makaronai++;
+console.log(makaronai);
+
+makaronai--;
+console.log(makaronai);
+
+++makaronai;
+console.log(makaronai);
+
+
+console.log('-------------------');
+let g = 6;
+console.log(g);
+//pirmiau didina po to spausdina
+console.log(++g);
+//pirmiau spausdina, po to padidina
+console.log(g++);
+console.log(g++);
+console.log(g);
 
 
 
