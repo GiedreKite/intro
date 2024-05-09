@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "nd": "node --watch ./js/duomenys/nd.js",
-    "ciklai": "node --watch ./js/ciklai/ciklai.js",
+    "for": "node --watch ./js/ciklai/for.js",
     "array": "node --watch ./js/duomenys/array.js",
     "if": "node --watch ./js/palyginimai/if.js",
     "function": "node --watch ./js/funkcijos/function.js",

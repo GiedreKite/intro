@@ -79,15 +79,43 @@ Hint: Use an if/else statement 😉
 
 
 
+const wu = 'Wu Tang';
+const mad = 'Cappaddona';
 
+if (wu.length < mad.length) {
+    console.log(wu);
+} else if (mad.length < wu.length) {
+    console.log(mad)
+}
 
-
-/*
+const g = 'Giedre';
+const n = 'Narvilaite';
+const m1 = 1988;
+const men = 5;
+const dien = 12;
+const data = 2024;
+const month = 5;
+const day = 9;
+let metai = data - m1;
+let metai2 = data - m1 - 1;
+const menesiai = men - month;
+const dienos = dien - day;
  
-Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus (Jonas Jonaitis). Atspausdinti trumpesnį stringą.
+console.log(metai);
+console.log(metai2);
+
+function manoMetai() {
+    let gimtadienis = 0;
+    if (men >= month && dien>= day) {
+      gimtadienis = metai2;
+    } else if (men< month && dien < day) {
+        gimtadienis = metai;
+    }
+return gimtadienis;
+}
+
+console.log(manoMetai());
+console.log(`Aš esu ${g} ${n}. Man yra ${manoMetai} metai.`);
+console.log(`Mano gimtadienis bus už ${menesiai} menesių ir ${dienos} dienų.`);
 
 
-Sukurkite 4 kintamuosius, kurie saugotų jūsų vardą, pavardę, gimimo metus ir šiuos metus (nebūtinai tikrus). Parašykite kodą, kuris pagal gimimo metus paskaičiuotų jūsų amžių ir naudodamas vardo ir pavardės kintamuosius atspausdintų tokį sakinį :
-"Aš esu Vardenis Pavardenis. Man yra XX metai(ų)".
-
-*/
