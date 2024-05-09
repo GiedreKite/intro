@@ -4,7 +4,10 @@
   "description": "kazkas apie kazka",
   "main": "index.js",
   "scripts": {
-    "nd": "node --watch ./js/duomenys/nd.js",
+     "numbersize": "node --watch ./js/nd/numbersize.js",
+    "typeOf": "node --watch ./js/duomenys/typeOf.js",
+    "multiply": "node --watch ./js/nd/multiply.js",
+    "nd": "node --watch ./js/nd/nd.js",
     "for": "node --watch ./js/ciklai/for.js",
     "array": "node --watch ./js/duomenys/array.js",
     "if": "node --watch ./js/palyginimai/if.js",

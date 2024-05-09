@@ -115,7 +115,7 @@ return gimtadienis;
 }
 
 console.log(manoMetai());
-console.log(`Aš esu ${g} ${n}. Man yra ${manoMetai} metai.`);
+console.log(`Aš esu ${g} ${n}. Man yra ${manoMetai()} metai.`);
 console.log(`Mano gimtadienis bus už ${menesiai} menesių ir ${dienos} dienų.`);
 
 

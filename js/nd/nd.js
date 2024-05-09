@@ -379,22 +379,33 @@ console.log(numberCount(-18, 18, 7));
 
 
 
-function tusciaFunkcija() {
+function tusciaFunkcija2() {
     if (tusciaFunkcija.length >=0); {  
     }
     return 'false'}
+
+console.log(tusciaFunkcija2());
+
+function tusciaFunkcija() {
+    return 'false'
+}
 
 console.log(tusciaFunkcija());
 
 
 function daugyba(no1, no2) {
+    if (typeof no2 !== 'number'); {
+        console.log('Pirmas parametras nera skaiciaus tipo');
+    } else    if (typeof no2 !== 'number') {
+        console.log('Antras parametras nera skaiciaus tipo');
+    }
     const ats = no1 * no2;
     return ats
 }
 
-console.log(daugyba(1,2))
-console.log(daugyba(3,2))
-console.log(daugyba(1,3))
+console.log(daugyba(1, 2))
+console.log(daugyba(3, 2))
+console.log(daugyba(1, 3))
 
 
 
@@ -402,14 +413,12 @@ console.log(daugyba(1,3))
 
 function skaitmenuKiekisSkaiciuje(nom1) {
     let ats = 0;
-     if (nom1 = "") {
+     if (typeof nom1 !== 'number') {
         'Pateikta netinkamo tipo reikšmė';
-    } else if (nom1 >= 0) {
-        ats = nom1.length
-    } else if (nom1 < 0) {
-        ats = nom1.length
+    } else  {
+        ats = nom1.length;
     }
-    return nom1.length;
+    return ats;
 }
 
 console.log(skaitmenuKiekisSkaiciuje(5));
@@ -443,7 +452,12 @@ console.log( skaitmenuKiekisSkaiciuje( “asd” ) );
 rezultatas: “Pateikta netinkamo tipo reikšmė.”
 console.log( skaitmenuKiekisSkaiciuje( NaN ) );
 rezultatas: “Pateikta netinkamo tipo reikšmė.”
+*/
 
+
+
+
+/*
 Funkcija pavadinimu “didziausiasSkaiciusSarase”:
 priima vieną kintamąjį
 jei perduotas kintamasis nėra sąrašo tipo, tai išveda pranešimą “Pateikta netinkamo tipo reikšmė.”
