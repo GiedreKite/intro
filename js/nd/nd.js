@@ -394,14 +394,16 @@ console.log(tusciaFunkcija());
 
 
 function daugyba(no1, no2) {
-    if (typeof no2 !== 'number'); {
-        console.log('Pirmas parametras nera skaiciaus tipo');
-    } else    if (typeof no2 !== 'number') {
-        console.log('Antras parametras nera skaiciaus tipo');
+    if (typeof no1 !== 'number'); {
+        console.log ('Pirmas parametras nera skaiciaus tipo');
+    }
+     if (typeof no2 !== 'number'); {
+        console.log ('Antras parametras nera skaiciaus tipo');
     }
     const ats = no1 * no2;
-    return ats
+    return ats;
 }
+
 
 console.log(daugyba(1, 2))
 console.log(daugyba(3, 2))
