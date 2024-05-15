@@ -2,9 +2,16 @@
 Funkcija - funkcija, pernaudojama logika
 () - parametru blokas
 {} - logikos blokas
-Input
-
+Input => Function() => Output
 */
+
+function doSomething(params) {
+    // 1) Input (parametru) validavimas
+    // 2) Vykdome logika
+    // 3) Gauto rezultato validavimas
+    // 4) Graziname rezultata
+}
+
 
 function funkcijosPavadinimas() {
 };

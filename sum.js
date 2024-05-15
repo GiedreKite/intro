@@ -1,15 +1,33 @@
-const number1 = 1
-const number2 = 2
-const number3 = 3
-const number4 = 4
-const number5 = 5
-const number6 = 6
-const number7 = 7
-const number8 = 8
-const number9 = 9
-const number10 = 10
+/*function positiveSum(arr) {
+  if (arr <= 0) {
+    return 0;
+  }
+  return sum;
+}
+var assert = ('positivesum');
+assert.strictEqual(arr, sum , "My message goes here");
 
-const sum = number6+number10
 
-console.log(sum)
+var assert = require('assert');
+assert.strictEqual(50, "50", "My message goes here");
+*/
+function century(year) {
+  if(year !== 'number'){
+    'folse'
+  };
+  
+  return parseFloat(year);
+}
 
+console.log(1805)
+
+/*
+console.log(positiveSum(1,2,3,4,5,15));
+assert.strictEqual
+console.log(assert.strictEqual(positiveSum([1,2,3,4,5]),15));
+console.log(assert.strictEqual(positiveSum(1,2,3,4,5,15)));
+    assert.strictEqual(positiveSum(1,-2,3,4,513));
+    assert.strictEqual(positiveSum([],0));
+    assert.strictEqual(positiveSum(-1,-2,-3,-4,-5,0));
+    assert.strictEqual(positiveSum(-1,2,3,4,-5,9));
+    */

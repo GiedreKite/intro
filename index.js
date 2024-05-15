@@ -29,3 +29,8 @@ Duomenu tipai:
 - null
 - undefined
 */
+/*
+Duomenu iniciavimo budai:
+- const (default) /negali pakeisti
+- let (kai turi intencija keisti)
+- var (seniena, pirmtakas, kurio reiketu nenaudoti, nebent zinai ka darai)

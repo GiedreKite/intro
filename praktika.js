@@ -95,7 +95,7 @@ const men = 5;
 const dien = 12;
 const data = 2024;
 const month = 5;
-const day = 9;
+const day = 10;
 let metai = data - m1;
 let metai2 = data - m1 - 1;
 const menesiai = men - month;
@@ -117,5 +117,59 @@ return gimtadienis;
 console.log(manoMetai());
 console.log(`Aš esu ${g} ${n}. Man yra ${manoMetai()} metai.`);
 console.log(`Mano gimtadienis bus už ${menesiai} menesių ir ${dienos} dienų.`);
+
+
+let labas = 'labas123';
+
+function pavadinimas (labas) {
+    console.log(labas);
+}
+
+pavadinimas(labas);
+
+function pavadinimas2(a,b) {
+    return a+b
+}
+
+console.log(pavadinimas2(5,6));
+
+function arLyginis(number) {
+if(number % 2 === 0) {
+    console.log(`${number} yra lyginis`);
+}
+else {
+    console.log(`${number} yra nelyginis`);
+}
+}
+
+arLyginis(6);
+arLyginis(7);
+arLyginis(13);
+
+function printNumber(count) {
+    for(let i = 0; i <= count; i++) {
+        console.log(i)
+    }
+}
+
+printNumber(3)
+
+
+console.log('------------');
+
+const arrayus = [1021,1,5,11,-1,20,32]
+
+function biggestNo (arr) {
+    let bigges = arr[0];
+    for (let i=0; i<= arr.length; i++) {
+        if (arr[i] > bigges) {
+            bigges = arr[i];
+        }
+    }
+    return bigges
+}
+
+console.log(biggestNo(arrayus))
+
 
 
