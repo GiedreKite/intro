@@ -1,7 +1,7 @@
 /* 
 String- tekstas, tekstiniu simboliu grandinele
 
-iniciavimas: ' vienguba, " (dviguba)
+iniciavimas: ' vienguba, " (dviguba) ` (backtick)
 
 */
 
@@ -44,7 +44,7 @@ console.log(kabutes12_2);
 console.log(kabutes12_3);
 console.log(kabutes12_4);
 
-console.clear()
+
 
 
 // Pinigines turinys: 0
@@ -68,3 +68,55 @@ console.log(d+z+90);
 console.log(e+z);
 
 
+/*
+<header>
+    <img>
+    <nav>
+        <a></a>
+        <a></a>
+        <a></a>
+    </nav>
+</header>
+*/
+
+// \r - return
+// \n - new line
+// \t - tab
+
+const HTML = '<header>\r\n\
+\t<img>\r\n\
+\t<nav>\r\n\
+\t\t<a></a>\r\n\
+\t\t<a></a>\r\n\
+\t\t<a></a>\r\n\
+\t</nav>\r\n\
+</header>\r\n';
+
+console.log(HTML);
+
+const backtick = `Labas rytas, Lietuva!`;
+console.log(backtick);
+
+const backtick1 = `Backtikine (\`) kabute.`;
+
+console.log(backtick1);
+
+const HTML2 = `<header>
+    <img>
+    <nav>
+        <a></a>
+        <a></a>
+        <a></a>
+    </nav>
+</header>`;
+console.log(HTML2);
+
+const n = 7;
+const m = 5;
+const o =  n + m;
+
+const ats1 = n + ' + ' + m + ' = ' + o;
+console.log(ats1);
+
+const ats2 = `${n} + ${m} = ${o}`;
+console.log(ats2);

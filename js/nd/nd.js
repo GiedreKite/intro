@@ -340,9 +340,8 @@ function reverseString2(text) {
 function reverseString3(text) {
     let answer = '';
 
-    for (let i = text.length - 1; i >= 0; --i) {
-        console.log(i, text[i]);
-        answer = text[text.length -1 - i] + answer;
+    for (let i = 0; i < text.length; i++) {
+        answer = text[i] + answer;
     }
     return text;
 }
@@ -350,6 +349,33 @@ function reverseString3(text) {
 console.log(reverseString('labukas'));
 console.log(reverseString2('alus'));
 console.log(reverseString3('sedek uzu kedes'));
+
+function reverseString(text) {
+    let answer = '';
+
+    // for (let i = 0; i < text.length; i++) {
+    //     answer += text[text.length - 1 - i];
+    // }
+
+    for (let i = 0; i < text.length; i++) {
+        answer = text[i] + answer;
+    }
+
+    // for (let i = text.length - 1; i >= 0; i--) {
+    //     answer += text[i];
+    // }
+
+    // for (let i = text.length - 1; i >= 0; i--) {
+    //     answer = text[text.length - 1 - i] + answer;
+    // }
+
+    return answer;
+}
+
+console.log(reverseString('labukas'), '-->', 'sakubal');
+console.log(reverseString('alus'), '-->', 'sula');
+console.log(reverseString('sedek uzu kedes'), '-->', 'sedek uzu kedes');
+
 
 console.clear();
 
@@ -414,7 +440,7 @@ console.log(daugyba(1, 3))
 
 console.clear()
 
-
+/*
 function skaitmenuKiekisSkaiciuje(n) {
     if(typeof n !== 'number') {
         return 'Blogas duomenu tipas.'
@@ -445,64 +471,45 @@ console.log(skaitmenuKiekisSkaiciuje("asd"));
 console.log(skaitmenuKiekisSkaiciuje(NaN));
 
     
-
-console.log('-------------');
-console.clear()
+*/
 console.log('-------------');
 
-function didziausiasSkaiciusSarase1(numb) {
-   if (numb.length <= 0) {
+console.log('-------------');
+/*
+function didziausiasSkaiciusSarase(numberiuks) {
+    if (numberiuks.length <= 0) {
         return 'Pateiktas sąrašas negali būti tuščias.';
     }
-    if (typeof numb !== 'number') {
-        return 'Pateikta netinkamo tipo reikšmė.';
+    let didziausiasis = numberiuks[0];
+    for (let k = 0; k < numberiuks.length; k++) {
+    if (numberiuks[k] > didziausiasis) {
+        didziausiasis = numberiuks[k]
+    } 
     }
-    let max = numb[0];
-    for (let i = 0; i < numb.length ; i++) {
-    if (max <= numb[i]) {
-        return max = numb[i];
+     if (typeof numberiuks === 'string') {
+        return 'Pateikta netinkamo tipo reikšmė.'
     }
-}
-    return ; 
-}
-
-
-console.log(didziausiasSkaiciusSarase1(1));
-console.log(didziausiasSkaiciusSarase1(1, 2, 3));
-console.log(didziausiasSkaiciusSarase1(-5,78,14,0,18));
-console.log(didziausiasSkaiciusSarase1(69,69,69,69,66));
-console.log(didziausiasSkaiciusSarase1(-1, -2, -3, -4, -5, -6, -7, -8 ));
-console.log(didziausiasSkaiciusSarase1('pomidoras'));
-console.log(didziausiasSkaiciusSarase1([]));
-console.log(didziausiasSkaiciusSarase1(true));
-
-
-console.log('-------------');
-
-function didziausiasSkaiciusSarase(number) {
-   if (number.length <= 0) {
-        return 'Pateiktas sąrašas negali būti tuščias.';
+     if (typeof numberiuks === 'boolean') {
+        return 'Pateikta netinkamo tipo reikšmė.'
     }
-    if (typeof number !== 'number') {
-        return 'Pateikta netinkamo tipo reikšmė.';
+     if (typeof numberiuks === 'undefined') {
+        return 'Pateikta netinkamo tipo reikšmė.'
     }
-    let maximum = number[0]
-    for (let i = 0; i<=number.length ; i++) {
-        if (number[i] > maximum) {
-            maximum = number[i];
-        }
+     if (typeof numberiuks === 'symbol') {
+        return 'Pateikta netinkamo tipo reikšmė.'
     }
-    return Math.max(number);
+    return didziausiasis
 }
 
-console.log(didziausiasSkaiciusSarase(1));
-console.log(didziausiasSkaiciusSarase(1, 2, 3));
-console.log(didziausiasSkaiciusSarase(-5,78,14,0,18));
-console.log(didziausiasSkaiciusSarase(69,69,69,69,66));
-console.log(didziausiasSkaiciusSarase(-1, -2, -3, -4, -5, -6, -7, -8 ));
+console.log(didziausiasSkaiciusSarase([1]));
+console.log(didziausiasSkaiciusSarase([1, 2, 3]));
+console.log(didziausiasSkaiciusSarase([-5,78,14,0,18]));
+console.log(didziausiasSkaiciusSarase([69,69,69,69,66]));
+console.log(didziausiasSkaiciusSarase([-1, -2, -3, -4, -5, -6, -7, -8 ]));
 console.log(didziausiasSkaiciusSarase('pomidoras'));
 console.log(didziausiasSkaiciusSarase([]));
 
+*/
 
 /*
 Funkcija pavadinimu “didziausiasSkaiciusSarase”:
@@ -513,9 +520,17 @@ priešingu atveju, funkcija tęsia darbą
 pereina per visą pateiktą sąrašą ir į atskirą kintamąjį įsimena skaičių, kuris tuo metu yra didžiausias
 gražina didžiausią surastą skaičių
 */
+
+
 function isrinktiRaides(tekstas, kelintaRaide) {
     if (typeof tekstas !== 'string') {
         return 'Pirmasis kintamasis yra netinkamo tipo.';
+    }
+    if (typeof kelintaRaide !== 'number') {
+    return 'Antrasis kintamasis yra netinkamo tipo.'
+    }
+     if (kelintaRaide >= tekstas.length) {
+     return 'Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.'
     }
     if (tekstas.length >= 100) {
         return 'Tekstas yra per ilgas'
@@ -523,31 +538,29 @@ function isrinktiRaides(tekstas, kelintaRaide) {
     if (tekstas.length <= 0) {
         return 'Tekstas yra tuscias'
     }
-    if (typeof kelintaRaide !== 'number') {
-    return 'Antrasis kintamasis yra netinkamo tipo.'
-    }
-    if (kelintaRaide >0) {
+    if (kelintaRaide <= 0) {
     return 'Antrasis kintamasis turi buti didesnis uz nuli.'
     }
-    if (kelintaRaide <= tekstas.length) {
-    return 'Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.'
+     let iskarpyta = '';
+    for (let i = kelintaRaide-1; i < tekstas.length; i = kelintaRaide + i) { 
+        iskarpyta += tekstas[i];
     }
-    if (kelintaRaide <= tekstas.length) {
-    return 'Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.'
-    }
-    return kelintaRaide;
+return iskarpyta;
 }
 
-console.log(isrinktiRaides(“abcdefg”, 2 ));
+
+console.log(isrinktiRaides('abcdefg', 2));
 //rezultatas: “bdf”
-console.log( isrinktiRaides( “abcdefghijkl”, 3 ) );
+console.log( isrinktiRaides('abcdefghijkl', 3) );
 //rezultatas: “cfil”
-console.log( isrinktiRaides( “abc”, 0 ) );
+console.log( isrinktiRaides('abc', 0 ) );
 //rezultatas: “Antrasis kintamasis turi būti didesnis už nulį.”
-console.log( isrinktiRaides( “abc”, 4 ) );
+console.log( isrinktiRaides('abc', 4 ) );
 //rezultatas: “Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.”
-console.log( isrinktiRaides( 1561, 2 ) );
+console.log( isrinktiRaides(1561, 2 ) );
 //rezultatas: “Pirmasis kintamasis yra netinkamo tipo.”
+
+
 
 /*
 Funkcija pavadinimu “isrinktiRaides”:
@@ -558,17 +571,6 @@ priešingu atveju tęsiame darbą
 išrenkame iš nurodyto teksto kas kelintą raidę (pagal antrojo kintamojo žingsnį)
 išrinktas raides sudėti į atskirą kintamąjį, kuris yra teksto tipo
 gražina rezultatą
-TESTAI:
-console.log( isrinktiRaides( “abcdefg”, 2 ) );
-rezultatas: “bdf”
-console.log( isrinktiRaides( “abcdefghijkl”, 3 ) );
-rezultatas: “cfil”
-console.log( isrinktiRaides( “abc”, 0 ) );
-rezultatas: “Antrasis kintamasis turi būti didesnis už nulį.”
-console.log( isrinktiRaides( “abc”, 4 ) );
-rezultatas: “Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.”
-console.log( isrinktiRaides( 1561, 2 ) );
-rezultatas: “Pirmasis kintamasis yra netinkamo tipo.”
 
 
 */
@@ -590,7 +592,7 @@ sugalvoti bent 5 testus, kurie bendrai iš esmės patvirtintu gerą funkcijos ve
 
 
 console.log('-------------');
-
+/*
 function dalyba(num1, num2) {
     if (typeof num1 !== 'number') {
         return 'pirmas simbolis klaidingas, turi buti skaitmuo'
@@ -609,3 +611,4 @@ console.log(dalyba([], 2))
 console.log(dalyba(4, 'stringas'))
 console.log(dalyba('stringas', 2))
 console.log(dalyba(Infinity, 2))
+*/

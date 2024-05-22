@@ -351,3 +351,57 @@ if(ccc) {
 } else {
     console.log(false);
 }
+ console.clear();
+
+if (4==4) {
+    console.log('taip');
+} else {
+    console.log('Ne');
+}
+
+if (4===4) {
+    console.log('taip');
+} else {
+    console.log('Ne');
+}
+
+if (4=='4') {
+    console.log('taip');
+} else {
+    console.log('Ne');
+}
+
+if (1==true) {
+    console.log('taip');
+} else {
+    console.log('Ne');
+}
+if (1===true) {
+    console.log('taip');
+} else {
+    console.log('Ne');
+}
+
+const n1 = 4;
+const n2 ='4';
+
+if(n1==n2) {
+    console.log('taip, ', n1 + n2);
+} else {
+    console.log('ne');
+}
+if(n1==n2) {
+    console.log('taip, ', n1 - n2);
+} else {
+    console.log('ne');
+}
+if(n1==n2) {
+    console.log('taip, ', n1 * n2);
+} else {
+    console.log('ne');
+}
+if(n1==n2) {
+    console.log('taip, ', n1 / n2);
+} else {
+    console.log('ne');
+}
