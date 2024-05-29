@@ -21,7 +21,7 @@ console.log(isFinite(NaN));
 console.log(isFinite(null));
 console.log(isFinite('0'));
 
-console.log('is NaN');
+console.log('is NaN------------');
 console.log(isNaN(152455));
 console.log(isNaN(-1254));
 console.log(isNaN(-12.54));

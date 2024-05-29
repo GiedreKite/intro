@@ -62,7 +62,10 @@ console.log(ats2);
 
 const first = s => s[0];
 const last = s => s.at(-1);
+
 //const last = s => s[s.length - 1];
+console.log('--------');
+
 
 const text1 = 'Labas';
 const  strAts = text1.length < 5 ? first(text1) : last(text1);
@@ -74,32 +77,34 @@ const strAts2 = FuncToCall(text1);
 console.log(FuncToCall);
 console.log(strAts2);
 
+console.log('--------');
 const jonasMarks = [];
-const onaMarks = [10, 2, 8, 4, 6, 9];
+const maryteMarks = [10, 2, 8, 4, 6];
 
 function emptyMarksArray() {
-    return 'studentas neturi pazymiu';
-}
-console.log('---------------');
-function marksAverage (marks) {
-    let sum = 0;
-    for (let i =0; i< marks.length; i++) {
-        sum++;
-    }
-    const avarage = sum / marks.length;
-    return avarage
+    return 'Studentas neturi pazymiu, todel negalime apskaiciuoti jo pazymiu vidurkio.';
 }
 
+function marksAverage(marks) {
+    let sum = 0;
+
+    for (let i = 0; i < marks.length; i++) {
+        sum += marks[i];
+    }
+
+    const count = marks.length;
+    const average = sum / count;
+    return average;
+}
 
 const jonasFunc = jonasMarks.length === 0
-? emptyMarksArray
-:  marksAverage;
+    ? emptyMarksArray
+    : marksAverage;
 const jonasAverage = jonasFunc(jonasMarks);
 console.log(jonasAverage);
-console.log('---------------');
 
-const onaFunc = onaMarks.length === 0
-? emptyMarksArray
-:  marksAverage;
-const onaAverage = onaFunc(onaMarks);
-console.log(onaAverage);
+const maryteFunc = maryteMarks.length === 0
+    ? emptyMarksArray
+    : marksAverage;
+const maryteAverage = maryteFunc(maryteMarks);
+console.log(maryteAverage);

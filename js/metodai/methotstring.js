@@ -187,3 +187,5 @@ const text = 'Labas rytas, Lietuva! Kaip tu, mieloji, ten laikais?';
 const dictionary = text.replaceAll(',','').replaceAll('!','').replaceAll('?','').split(' ')
 
 console.log(dictionary)
+
+

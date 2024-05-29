@@ -1,178 +1,164 @@
 
-//https://www.codewars.com/kata/53dc23c68a0c93699800041d/train/javascript
 
-
-function smash (words) {
-  let atsakymas = '';
-
- // if (words.length >= 0) {
- //   return '';
- // } if (words.length === 1) {
- //   return words;
- // } else {
-    for (let i = 0; i< words.length; i++) {
-      atsakymas = words[i] + atsakymas; 
-    }
-    return atsakymas;
-  }
-
-
-
-
-console.log(smash('hello', 'world', 'this', 'is', 'great'));
-console.log(smash('labas','man gerai','sekas'));
-
- if ("Should return empty string for empty array.", () => {
-   assert.strictEqual(smash([]), "");
- });
-
- if ("One word example should return the word.", () => {
-   assert.strictEqual(smash(["hello"]), "hello");
- });
-   
- if ("Multiple words should be separated by spaces.", () =>  {
-   assert.strictEqual(smash(["hello", "world"]), "hello world");
-   assert.strictEqual(smash(["hello", "amazing", "world"]), "hello amazing world");
-   assert.strictEqual(smash(["this", "is", "a", "really", "long", "sentence"]), "this is a really long sentence");
- });
-
-
+// https://www.codewars.com/kata/57256064856584bc47000611/train/javascript
 
 /*
-https://www.codewars.com/kata/57356c55867b9b7a60000bd7/train/javascript
-DESCRIPTION:
-Your task is to create a function that does four basic mathematical operations.
+Task
+Coding in function howManySmaller, function accept 2 parameter:arr and n. arr is a decimal array. n is a decimal.
 
-The function should take three arguments - operation(string/char), value1(number), value2(number).
-The function should return result of numbers after applying the chosen operation.
+The first mission: let all elements in the array keep two decimal places(No need to convert number n).
 
-Examples(Operator, value1, value2) --> output
-('+', 4, 7) --> 11
-('-', 15, 18) --> -3
-('*', 5, 5) --> 25
-('/', 49, 7) --> 7
+The second mission: Traversal arr, count the number of the element which smaller than n and return it.
 
+for example:
 
+howManySmaller([1.234,1.235,1.228],1.24) should return 2
+howManySmaller([1.1888,1.1868,1.1838],1.19) should return 1
+howManySmaller([3.1288,3.1212,3.1205],3.1212) should return 2
 */
+function howManySmaller(arr,n){
 
-//function basicOp(operation, value1, value2){
-//
-//   const veiksmas = String(value1) +operation + String(value2);
-//
-//  return (eval(veiksmas));
-//}
-
-function basicOp(operation, value1, value2){
-  if (operation === '+') {
-    return value1+value2;
-  }
-  if (operation === '-') {
-    return value1-value2;
-  }
-    if (operation === '*') {
-    return value1*value2;
-  }
-    if (operation === '/') {
-    return value1/value2;
-  }
-}
-
-
-    console.log(basicOp("+", 4, 7));
-    console.log(basicOp("-", 15, 18));
-    console.log(basicOp("*", 5, 5));
-    console.log(basicOp("/", 49, 7));
   
-function calcObj(operation, n1, n2){
- const mathFuncions = {
-  '+' : (a,b) => a+b,
-  '-' : (a,b) => a-b,
-  '/' : (a,b) => a/b,
-  '*' : (a,b) => a*b,
- } 
- return mathFuncions[operation](n1,n2);
+  return 
 }
 
+console.log(howManySmaller([1.234,1.235,1.228],1.24), 2);
+console.log(howManySmaller([1.1888,1.1868,1.1838],1.19), 1);
+console.log(howManySmaller([3.1288,3.1212,3.1205],3.1212), 2);
 
-    console.log(calcObj("+", 4, 7));
-    console.log(calcObj("-", 15, 18));
-    console.log(calcObj("*", 5, 5));
-    console.log(calcObj("/", 49, 7));
 
-// https://www.codewars.com/kata/57a083a57cb1f31db7000028/train/javascript
+
+
+// https://www.codewars.com/kata/571f832f07363d295d001ba8/train/javascript
 /*
-    Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
 
-Examples
-n = 0  ==> [1]        # [2^0]
-n = 1  ==> [1, 2]     # [2^0, 2^1]
-n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
-MATHEMATICSFUNDAMENTALS
+function trueOrFalse(val){
+  const  a=1;
+  const  b=2;
+  const  c=1;
+  if (a>b) {
+    return 'false';
+  } if (a===b) {
+    return 'false'; 
+  } if (a<b) {
+    return 'true'; 
+  } if (a!==b) {
+    return 'true'; 
+  } if (b>c) {
+    return 'true';
+  } if (b===c) {
+    return 'false'; 
+  } if (b<c) {
+    return 'false'; 
+  } if (b!==c) {
+    return 'true'; 
+  } if (a===c) {
+    return 'true'; 
+  } if (a!==c) {
+    return 'false';      
+}
+}
+
+switch (day) {
+    case 1:
+        console.log('Pirm');
+        break;
+
+        */
+       /*
+console.log(trueOrFalse((a>b),"false"));
+console.log(trueOrFalse((a===b),"false"));
+console.log(trueOrFalse((a<b),"true"));
+console.log(trueOrFalse((a!==b),"true"));
+console.log(trueOrFalse((b>c),"true"));
+console.log(trueOrFalse((b===c),"false"));
+console.log(trueOrFalse((b<c),"false"));
+console.log(trueOrFalse((b!==c),"true"));
+console.log(trueOrFalse((a===c),"true"));
+console.log(trueOrFalse((a!==c),"false"));
+
 */
-function powersOfTwo(n){
-  let atsakymas  = [];
-    for (let i =  0; i <= n ; i++) {
-    atsakymas.push(2 ** i);
-  }
-  return atsakymas;
+
+
+// https://www.codewars.com/kata/55ca77fa094a2af31f00002a/train/javascript
+
+function messiGoals () {
+var laLigaGoals  = 10;
+var championsLeagueGoals = 40;
+var copaDelReyGoals = 8;
+return messiGoals}
+
+function totalGoals() {
+  var total = messiGoals;
+  return total 
 }
 
 
-function powersOfTwo1(n){
-  let atsakymas1  = [];
-  let atsakymas =[];
-  if (n === 0) {
-    for (let i =  0; i <= n ; i++) {
-    let two = 2 ** i;
-    atsakymas1 += + two;
-    }
-    return [atsakymas1];
-  }
-  if (n>0) {
-    for (let i =  0; i <= n ; i++) {
-    let two = 2 ** i;
-    atsakymas = two;
-    atsakymas = atsakymas + ',';
-  }return [atsakymas]
-  }
-}
-//expected [ '1' ] to deeply equal [ 1 ]
-//assert.deepEqual(powersOfTwo((0), [1]));
-//assert.deepEqual(powersOfTwo((1), [1, 2]));
-//assert.deepEqual(powersOfTwo((4), [1, 2, 4, 8, 16]));
-
-console.log(powersOfTwo((0), [1]));
-console.log(powersOfTwo((1), [1, 2]));
-console.log(powersOfTwo((4), [1, 2, 4, 8, 16]));
-    
-console.log(powersOfTwo1((0), [1]));
-console.log(powersOfTwo1((1), [1, 2]));
-console.log(powersOfTwo1((4), [1, 2, 4, 8, 16])); 
+console.log(messiGoals(), 58)
+console.log(totalGoals(), 58)
 
 
+// https://www.codewars.com/kata/5865918c6b569962950002a1/train/javascript
 
-//https://www.codewars.com/kata/56d6c333c9ae3fc32800070f/train/javascript
-
-function yearDays(year) {
-  if (year % 4 === 0) {
-    return '' + year + ' has 366 days'
-  } else {
-    return '' + year + ' has 365 days'
-  }
+function strCount(str, num){  
+  return str, str.slice(num - 1, num + 1);
 }
 
-//Test.assertEquals(yearDays(0), '0 has 366 days');
-//Test.assertEquals(yearDays(-64), '-64 has 366 days');
-//Test.assertEquals(yearDays(2016), '2016 has 366 days');
-//Test.assertEquals(yearDays(1974), '1974 has 365 days');
-//Test.assertEquals(yearDays(-10), '-10 has 365 days');
-//Test.assertEquals(yearDays(666), '666 has 365 days');
-//Test.assertEquals(yearDays(1857), '1857 has 365 days');
+    console.log(strCount('Hello', 'o'), 1);
+    console.log(strCount('Hello', 'l'), 2);
+    console.log(strCount('',      'z'), 0);
 
-console.log(yearDays(0), '0 has 366 days');
-console.log(yearDays(-64), '-64 has 366 days');
-console.log(yearDays(2016), '2016 has 366 days');
-console.log(yearDays(1974), '1974 has 365 days');
-console.log(yearDays(-10), '-10 has 365 days');
-console.log(yearDays(666), '666 has 365 days');
-console.log(yearDays(1857), '1857 has 365 days');
+   // https://www.codewars.com/kata/555a67db74814aa4ee0001b5/train/javascript
+
+/*
+function testEven(n) {
+
+  }
+
+
+   assert.strictEqual(testEven(0), true, "testEven for 0");
+    assert.strictEqual(testEven(0.5), false, "testEven for 0.5");
+    assert.strictEqual(testEven(1), false, "testEven for 1");
+    assert.strictEqual(testEven(2), true, "testEven for 2");
+    assert.strictEqual(testEven(-4), true, "testEven for 2");
+*/
+
+    // https://www.codewars.com/kata/568dc014440f03b13900001d/train/javascript
+
+    function getDrinkByProfession(param){
+  if (param = 'Jabroni' ){
+    return "Patron Tequila"
+  } else if (param = "School Counselor") {
+    return "Anything with Alcohol"
+  } else if (param = "Programmer") {
+    return "Hipster Craft Beer"
+  } else if (param = "Bike Gang Member") {
+    return 	"Moonshine"
+  } else if (param = "Politician") {
+    return 	"Your tax dollars"
+  } else if (param = "Rapper") {
+    return 	"Cristal"
+  } else { return  "Beer"}
+}
+
+
+console.log(getDrinkByProfession("jabrOni"), "Patron Tequila", "'Jabroni' should map to 'Patron Tequila'");
+console.log(getDrinkByProfession("scHOOl counselor"), "Anything with Alcohol", "'School Counselor' should map to 'Anything with alcohol'");
+console.log(getDrinkByProfession("prOgramMer"), "Hipster Craft Beer", "'Programmer' should map to 'Hipster Craft Beer'");
+console.log(getDrinkByProfession("bike ganG member"), "Moonshine", "'Bike Gang Member' should map to 'Moonshine'");
+console.log(getDrinkByProfession("poLiTiCian"), "Your tax dollars", "'Politician' should map to 'Your tax dollars'");
+console.log(getDrinkByProfession("rapper"), "Cristal", "'Rapper' should map to 'Cristal'");
+console.log(getDrinkByProfession("pundit"), "Beer", "'Pundit' should map to 'Beer'");
+console.log(getDrinkByProfession("Pug"), "Beer", "'Pug' should map to 'Beer'");
+
+
+
+
+
+
+
+
+
+
+
+
