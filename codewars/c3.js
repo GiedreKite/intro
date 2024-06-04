@@ -343,3 +343,115 @@ function grow(x){
 console.log(grow([1, 2, 3]), 6);
 console.log(grow([4, 1, 1, 1, 4]), 16); 
 console.log(grow([2, 2, 2, 2, 2, 2]), 64); 
+
+// https://www.codewars.com/kata/5720a1cb65a504fdff0003e2/train/javascript
+
+function differenceInAges(ages){
+const min = Math.min(...ages);
+const max = Math.max(...ages);
+const skirtumas = max - min;
+return [min, max, skirtumas]
+}
+
+ 
+console.log(differenceInAges([82, 15, 6, 38, 35]), [6, 82, 76]);
+console.log(differenceInAges([57, 99, 14, 32]), [14, 99, 85]);
+
+
+  // https://www.codewars.com/kata/568dc014440f03b13900001d/train/javascript
+
+    function getDrinkByProfession(param){
+      const didziosios = (param.toUpperCase())
+  if (didziosios === 'JABRONI' ){
+    return "Patron Tequila";
+  } else if (didziosios === "SCHOOL COUNSELOR") {
+    return "Anything with Alcohol";
+  } else if (didziosios === "PROGRAMMER") {
+    return "Hipster Craft Beer";
+  } else if (didziosios === "BIKE GANG MEMBER") {
+    return 	"Moonshine";
+  } else if (didziosios === "POLITICIAN") {
+    return 	"Your tax dollars";
+  } else if (didziosios === "RAPPER") {
+    return 	"Cristal";
+  } else { return  "Beer"};
+}
+
+
+console.log(getDrinkByProfession("jabrOni"), "Patron Tequila", "'Jabroni' -> 'Patron Tequila'");
+console.log(getDrinkByProfession("scHOOl counselor"), "Anything with Alcohol", "'School Counselor' ->  'Anything with alcohol'");
+console.log(getDrinkByProfession("prOgramMer"), "Hipster Craft Beer", "'Programmer' ->  'Hipster Craft Beer'");
+console.log(getDrinkByProfession("bike ganG member"), "Moonshine", "'Bike Gang Member' ->  'Moonshine'");
+console.log(getDrinkByProfession("poLiTiCian"), "Your tax dollars", "'Politician' ->  'Your tax dollars'");
+console.log(getDrinkByProfession("rapper"), "Cristal", "'Rapper' ->  'Cristal'");
+console.log(getDrinkByProfession("pundit"), "Beer", "'Pundit' ->  'Beer'");
+console.log(getDrinkByProfession("Pug"), "Beer", "'Pug' ->  'Beer'");
+
+//https://www.codewars.com/kata/58cb43f4256836ed95000f97/train/javascript
+
+const findDifference = (a, b) =>  a[0] * a[1] * a[2] > b[0] * b[1] * b[2] ? a[0] * a[1] * a[2] - b[0] * b[1] * b[2] :b[0] * b[1] * b[2]- a[0] * a[1] * a[2];
+
+console.log(findDifference([3, 2, 5], [1, 4, 4]), 14);
+console.log(findDifference([9, 7, 2], [5, 2, 2]), 106);
+console.log(findDifference([11, 2, 5], [1, 10, 8]), 30);
+console.log(findDifference([4, 4, 7], [3, 9, 3]), 31);
+console.log(findDifference([15, 20, 25], [10, 30, 25]), 0);
+
+        // https://www.codewars.com/kata/51c8991dee245d7ddf00000e/train/javascript
+
+function reverseWords(strii) {
+  let sakinys = '';
+
+  if (typeof strii === 'string' && strii.length > 0) {
+    const zodis = strii.split(' ');
+    for (let i = zodis.length - 1; i >= 0; i--) {
+      sakinys += zodis[i] + ' '
+    }
+  } 
+  return sakinys.trim(); 
+}
+
+console.log(reverseWords("hello world!"), "world! hello")
+console.log(reverseWords("yoda doesn't speak like this"), "this like speak doesn't yoda")
+console.log(reverseWords("foobar"), "foobar")
+console.log(reverseWords("kata editor"), "editor kata")
+console.log(reverseWords("row row row your boat"), "boat your row row row")
+console.log(reverseWords(""), "")
+
+// https://www.codewars.com/kata/54edbc7200b811e956000556/train/javascript
+
+function countSheeps(sheep) {
+    let sum = 0;
+  for (let i = 0; i < sheep.length; i++) {
+   if (sheep[i] === true) { 
+      sum++; 
+  }
+  } 
+  return sum;
+}
+
+
+
+console.log(countSheeps([undefined], 0));
+console.log(countSheeps([null], 0));
+console.log(countSheeps([false], 0));
+console.log(countSheeps([true], 1));
+console.log(countSheeps([undefined,null,false,true], 1));
+console.log(countSheeps([undefined,null,false,true,true,false,null,undefined], 2));
+console.log(countSheeps([true,true,true,false,true,true,true,true,true,false,true,false,true,false,false,true,true,true,true,true,false,false,true,true], 17));
+console.log(countSheeps([], 0));
+
+// https://www.codewars.com/kata/5b077ebdaf15be5c7f000077/train/javascript
+
+function countSheep (num){
+  let count = '';
+  for (let i = 1; i <= num; i++) {
+   count += `${i} sheep... `;
+  }
+  return count;
+}
+
+console.log(countSheep(0), "");
+console.log(countSheep(1), "1 sheep...");
+console.log(countSheep(2), "1 sheep...2 sheep...");
+console.log(countSheep(3), "1 sheep...2 sheep...3 sheep...")

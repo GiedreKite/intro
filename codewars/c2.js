@@ -64,7 +64,6 @@ console.log(whatday(1),'Sunday');
 console.log(whatday(2), 'Monday');
 console.log(whatday(3),'Tuesday');
 console.log(whatday(8),  'Wrong, please enter a number between 1 and 7');
-console.log(whatday(20),  'Wrong, please enter a number between 1 and 7');
 console.log(whatday('sanday'),  'Wrong, please enter a number between 1 and 7');
 console.log(whatday('undefined'),  'Wrong, please enter a number between 1 and 7');
 
@@ -76,31 +75,6 @@ function ifChuckSaysSo(){
 
 console.log(ifChuckSaysSo(), false);
 
-function reverseWords(strii) {
-  let sakinys = '';
-
-  if (typeof strii === 'string' && strii.length > 0) {
-    const zodis = strii.split(' ');
-    for (let i = strii.length - 1; i >= 0; i--) {
-      sakinys[i] = + zodis[i]
-    }
-
-    return sakinys;
-
-  } 
-  return '';
-}
-
-console.log(reverseWords());
-console.log(reverseWords('hello world!'));
-console.log(reverseWords());
-console.log(reverseWords("vienas"));
-console.log(reverseWords("hello world!"), "world! hello")
-console.log(reverseWords("yoda doesn't speak like this"), "this like speak doesn't yoda")
-console.log(reverseWords("foobar"), "foobar")
-console.log(reverseWords("kata editor"), "editor kata")
-console.log(reverseWords("row row row your boat"), "boat your row row row")
-console.log(reverseWords(""), "")
 
 /*
 https://www.codewars.com/kata/55a5befdf16499bffb00007b/train/javascript
@@ -325,36 +299,7 @@ console.log(saleHotdogs(  9),  855);
 console.log(saleHotdogs( 10),  900);
 console.log(saleHotdogs(100), 9000);
 
-//Please refer to the example above to complete the following functions
-function equal2(){
-  let a = v3; //set number value to a
-      b = v1; //set number value to b
-  return a - b;
-}
 
-function equal3(){
-  let a = v5; //set number value to a
-      b = v1; //set number value to b
-  return a * b;
-}
-
-function equal4(){
-  let a = v4; //set number value to a
-      b = v5; //set number value to b
-  return a / b;
-}
-
-function equal5(){
-  let a = v2, //set number value to a
-      b = v4; //set number value to b
-  return a % b;
-}
-
-console.log(equal1(), 100, "value of a+b is not equal to 100");
-console.log(equal2(), 100, "value of a-b is not equal to 100");
-console.log(equal3(), 100, "value of a*b is not equal to 100");
-console.log(equal4(), 100, "value of a/b is not equal to 100");
-console.log(equal5(), 100, "value of a%b is not equal to 100");
 
 
 
@@ -384,3 +329,44 @@ console.log(getFirst([1,2,3]),1);
 console.log(getLast([1,2,3]),3);
 console.log(pushElement([1,2,3]).length,4);
 console.log(popElement([1,2,3]).length,2);
+
+// https://www.codewars.com/kata/55cb854deb36f11f130000e1/train/javascript
+
+function weatherInfo (temp) {
+  var c = convertToCelsius(temp)
+  if (c < 0)
+    return (c + " is freezing temperature")
+  else
+    return (c + " is above freezing temperature")
+}
+
+function convertToCelsius (temperature) {
+  var celsius = (temperature - 32) * (5/9)
+  return Math.ceil(celsius)
+}
+
+
+console.log (weatherInfo(50), '10 is above freezing temperature')
+console.log (weatherInfo(23),  '-5 is freezing temperature')
+
+// https://www.codewars.com/kata/5861d28f124b35723e00005e/train/javascript
+const zeroFuel = (distanceToPump, mpg, fuelLeft) =>  (distanceToPump / mpg) <= fuelLeft ? true : false
+;
+
+console.log(zeroFuel(50, 25, 2), true);
+console.log(zeroFuel(100, 50, 1), false);
+
+// https://www.codewars.com/kata/5704aea738428f4d30000914/train/javascript
+function tripleTrouble(one, two, three){
+  let trip = ''; 
+  for (let i=0; i<one.length; i++) {
+    trip += one[i] + two[i] + three[i];
+  }
+  return trip
+}
+
+console.log(tripleTrouble("aaa","bbb","ccc"), "abcabcabc");
+console.log(tripleTrouble("aaaaaa","bbbbbb","cccccc"), "abcabcabcabcabcabc");
+console.log(tripleTrouble("burn", "reds", "roll"), "brrueordlnsl");
+console.log(tripleTrouble("Sea","urn","pms"), "Supermans"); 
+console.log(tripleTrouble("LLh","euo","xtr"), "LexLuthor");
