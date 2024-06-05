@@ -441,6 +441,34 @@ console.log(countSheeps([undefined,null,false,true,true,false,null,undefined], 2
 console.log(countSheeps([true,true,true,false,true,true,true,true,true,false,true,false,true,false,false,true,true,true,true,true,false,false,true,true], 17));
 console.log(countSheeps([], 0));
 
+
+ // https://www.codewars.com/kata/555a67db74814aa4ee0001b5/train/javascript
+
+
+function testEven(n) {
+    if (n % 2 === 0) {
+      return true
+    } else { return false}
+}
+
+
+   assert.strictEqual(testEven(0), true, "testEven for 0");
+    assert.strictEqual(testEven(0.5), false, "testEven for 0.5");
+    assert.strictEqual(testEven(1), false, "testEven for 1");
+    assert.strictEqual(testEven(2), true, "testEven for 2");
+    assert.strictEqual(testEven(-4), true, "testEven for 2");
+
+
+//https://www.codewars.com/kata/59441520102eaa25260000bf/train/javascript
+
+function unusualFive() {
+  const labas= 'labas'
+  return labas.length;
+ }
+ console.log(unusualFive())
+
+
+
 // https://www.codewars.com/kata/5b077ebdaf15be5c7f000077/train/javascript
 
 function countSheep (num){

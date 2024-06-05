@@ -126,9 +126,16 @@ console.log([...demo].reverse());
 const reversedDemo = demo.reverse();
 console.log(demo);
 
+console.log('n\ .filter -----------');
+console.log([...marks]);
+console.log([...marks].filter((item) => item<5));
 
-
-
+console.log('n\ .reduce -----------');
+console.log([...marks]);
+console.log([...marks].reduce((accumulator, currentValue) => accumulator + currentValue,
+  0));
+  console.log([...marks].reduce((accumulator, currentValue) => accumulator + currentValue,
+  10));
 
 
 
