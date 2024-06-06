@@ -94,11 +94,11 @@ const m1 = 1988;
 const men = 5;
 const dien = 12;
 const data = 2024;
-const month = 5;
-const day = 10;
+const month = 6;
+const day = 5;
 let metai = data - m1;
 let metai2 = data - m1 - 1;
-const menesiai = men - month;
+const menesiai =  12 - month + men;
 const dienos = dien - day;
  
 console.log(metai);
@@ -106,8 +106,8 @@ console.log(metai2);
 
 function manoMetai() {
     let gimtadienis = 0;
-    if (men >= month && dien>= day) {
-      gimtadienis = metai2;
+    if (men <= month && dien>= day) {
+      gimtadienis = metai;
     } else if (men< month && dien < day) {
         gimtadienis = metai;
     }

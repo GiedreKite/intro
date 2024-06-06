@@ -145,70 +145,7 @@ function magNumber(info){
 
 
 
-// https://www.codewars.com/kata/56cd44e1aa4ac7879200010b/train/javascript
-/*
-String.prototype.isUpperCase = function isUpperCase (string) {
-  if (string === string.toUpperCase()) {
-    return true && `${string} is upper case`;
-  } else { return `false ${string} is not upper case`;
-}
-}
-*/
 
-function isUpperCase (string) {
-  if (string === string.toUpperCase()) {
-    return true && `${string} is upper case`;
-  } else { return `false ${string} is not upper case`;
-}
-}
-
- console.log(isUpperCase('Hello World', false, 'Hello World is not upper case'));
- console.log(isUpperCase('hello world', false, 'hello world is not upper case'));
- console.log(isUpperCase('Hello world', false, 'Hello world is not upper case'));
- console.log(isUpperCase('hello World', false, 'hello World is not upper case'));
- console.log(isUpperCase('HELLO WORLD', true, 'HELLO WORLD is upper case'));
- console.log(isUpperCase('Bob walks his dog every day.', false, 'Bob walks his dog every day. is not upper case'));
- console.log(isUpperCase('BOB walks his dog every day.', false, 'BOB walks his dog every day. is not upper case'));
- console.log(isUpperCase('BOB WALKS HIS DOG EVERY DAY.', true, 'BOB WALKS HIS DOG EVERY DAY. is upper case'));
- console.log(isUpperCase('BOB WALKs HIS DOG EVERY DAY.', false, 'BOB WALKs HIS DOG EVERY DAY. is not upper case'));
- console.log(isUpperCase('#lovewins', false, '#lovewins is not upper case'));
- console.log(isUpperCase('#Lovewins', false, '#Lovewins is not upper case'));
- console.log(isUpperCase('#loveWins', false, '#loveWins is not upper case'));
- console.log(isUpperCase('#LoveWins', false, '#LoveWins is not upper case'));
- console.log(isUpperCase('#LOVEWins', false, '#LOVEWins is not upper case'));
- console.log(isUpperCase('#LoveWINS', false, '#LoveWINS is not upper case'));
- console.log(isUpperCase('#LOVEWINs', false, '#LOVEWINs is not upper case'));
- console.log(isUpperCase('#lOVEWINS', false, '#lOVEWINS is not upper case'));
- console.log(isUpperCase('#LOVEWINS', true, '#LOVEWINS is upper case'));
-/*
-
-
-    
-    assert.strictEqual('c'.isUpperCase(), false, 'c is not upper case');
-    assert.strictEqual('C'.isUpperCase(), true, 'C is upper case');
-    assert.strictEqual('hello I AM DONALD'.isUpperCase(), false, 'hello I AM DONALD not is upper case');
-    assert.strictEqual('HELLO I AM DONALD'.isUpperCase(), true, 'HELLO I AM DONALD is upper case');
-    assert.strictEqual('ACSKLDFJSgSKLDFJSKLDFJ'.isUpperCase(), false, 'ACSKLDFJSgSKLDFJSKLDFJ not is upper case');
-    assert.strictEqual('ACSKLDFJSGSKLDFJSKLDFJ'.isUpperCase(), true, 'ACSKLDFJSGSKLDFJSKLDFJ is upper case');
-    assert.strictEqual('Hello World'.isUpperCase(), false, 'Hello World is not upper case');
-    assert.strictEqual('hello world'.isUpperCase(), false, 'hello world is not upper case');
-    assert.strictEqual('Hello world'.isUpperCase(), false, 'Hello world is not upper case');
-    assert.strictEqual('hello World'.isUpperCase(), false, 'hello World is not upper case');
-    assert.strictEqual('HELLO WORLD'.isUpperCase(), true, 'HELLO WORLD is upper case');
-    assert.strictEqual('Bob walks his dog every day.'.isUpperCase(), false, 'Bob walks his dog every day. is not upper case');
-    assert.strictEqual('BOB walks his dog every day.'.isUpperCase(), false, 'BOB walks his dog every day. is not upper case');
-    assert.strictEqual('BOB WALKS HIS DOG EVERY DAY.'.isUpperCase(), true, 'BOB WALKS HIS DOG EVERY DAY. is upper case');
-    assert.strictEqual('BOB WALKs HIS DOG EVERY DAY.'.isUpperCase(), false, 'BOB WALKs HIS DOG EVERY DAY. is not upper case');
-    assert.strictEqual('#lovewins'.isUpperCase(), false, '#lovewins is not upper case');
-    assert.strictEqual('#Lovewins'.isUpperCase(), false, '#Lovewins is not upper case');
-    assert.strictEqual('#loveWins'.isUpperCase(), false, '#loveWins is not upper case');
-    assert.strictEqual('#LoveWins'.isUpperCase(), false, '#LoveWins is not upper case');
-    assert.strictEqual('#LOVEWins'.isUpperCase(), false, '#LOVEWins is not upper case');
-    assert.strictEqual('#LoveWINS'.isUpperCase(), false, '#LoveWINS is not upper case');
-    assert.strictEqual('#LOVEWINs'.isUpperCase(), false, '#LOVEWINs is not upper case');
-    assert.strictEqual('#lOVEWINS'.isUpperCase(), false, '#lOVEWINS is not upper case');
-    assert.strictEqual('#LOVEWINS'.isUpperCase(), true, '#LOVEWINS is upper case');
-    */
 
 
     // https://www.codewars.com/kata/5601409514fc93442500010b/train/javascript
@@ -239,8 +176,8 @@ console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21, false));
  // https://www.codewars.com/kata/57280481e8118511f7000ffa/train/javascript
 
  function splitAndMerge(string, separator) {
-  const text = [...string].toString;
-  return string.split('', separator)
+  const text = string.split(' ')
+  return text
 }
 
 console.log(splitAndMerge("My name is John"," ") , "M y n a m e i s J o h n");
@@ -261,3 +198,36 @@ console.log(strii(true.toString(), "true"));
 console.log(strii(false.toString(), "false"));
 console.log(strii([1,2,3,4,5].toString().replace(/\s+/g, ""), "[1,2,3,4,5]"));
   
+
+
+console.log('---------')
+//https://www.codewars.com/kata/5d59576768ba810001f1f8d6/train/javascript 
+
+function quadratic(x1, x2){
+  let x=[]
+  let sprendimas = (x-x1) * (x-x2)
+  if (x1 === 0) { return x = x1}
+  else if (x2 === 0) { return x = x2}
+  return [x1, x2, x1*x2];
+}
+
+console.log(quadratic( 0,  1), [1, -1,   0]);
+console.log(quadratic( 1,  1), [1, -2,   1]);
+console.log(quadratic(-4, -9), [1, 13,  36]);
+console.log(quadratic(-5, -4), [1,  9,  20]);
+console.log(quadratic( 4, -9), [1,  5, -36]);
+console.log(quadratic( 5, -4), [1, -1, -20]);
+
+
+// https://www.codewars.com/kata/55d24f55d7dd296eb9000030/train/javascript
+const summation = function (num) {
+  let sum = 0;
+  for (let i = 0; i<num.length; i++) {
+    sum += num[i]
+  }
+  return console.log(sum) 
+}
+
+console.log(summation(1),  1);
+console.log(summation(2),  3);
+console.log(summation(8), 36);

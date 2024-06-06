@@ -441,6 +441,21 @@ console.log(countSheeps([undefined,null,false,true,true,false,null,undefined], 2
 console.log(countSheeps([true,true,true,false,true,true,true,true,true,false,true,false,true,false,false,true,true,true,true,true,false,false,true,true], 17));
 console.log(countSheeps([], 0));
 
+// https://www.codewars.com/kata/57256064856584bc47000611/train/javascript
+function howManySmaller(arr,n){
+  let ats = 0;
+  for (let i = 0; i < arr.length; i++) {
+  if (arr[i].toFixed(2) < n) {
+   ats++; 
+  }
+ } return ats; 
+}
+
+console.log(howManySmaller([1.234,1.235,1.228],1.24), 2);
+console.log(howManySmaller([1.1888,1.1868,1.1838],1.19), 1);
+console.log(howManySmaller([3.1288,3.1212,3.1205],3.1212), 2);
+console.log(1.234.toFixed(2))
+
 
  // https://www.codewars.com/kata/555a67db74814aa4ee0001b5/train/javascript
 
@@ -457,6 +472,20 @@ function testEven(n) {
     assert.strictEqual(testEven(1), false, "testEven for 1");
     assert.strictEqual(testEven(2), true, "testEven for 2");
     assert.strictEqual(testEven(-4), true, "testEven for 2");
+
+// https://www.codewars.com/kata/5a34b80155519e1a00000009/train/javascript
+function multipleOfIndex(array) {
+  let ats = [];
+  for (let i=0; i<array.length; i++) {
+    if (array[i] % i === 0 || array[i] === 0) {
+    ats.push(array[i]);
+    }
+  } return  ats;
+}
+
+
+console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));  [-6, 32, 25]
+
 
 
 //https://www.codewars.com/kata/59441520102eaa25260000bf/train/javascript

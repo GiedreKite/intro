@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "arrow": "node --watch ./js/funkcijos/arrow.js",
+    "newmetods": "node --watch ./js/metodai/newmetods.js",
     "methotstring": "node --watch ./js/metodai/methotstring.js",
     "c1": "node --watch ./codewars/c1.js",
     "c2": "node --watch ./codewars/c2.js",
