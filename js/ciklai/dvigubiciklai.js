@@ -8,15 +8,15 @@ pateikimo formatas: 1:00...
 2:00
 */
 
-/*
+
 for(let i = 1; i <= 4; i++) {
     console.log(i+':00');
     console.log(i+':15');
     console.log(i+':30');
     console.log(i+':45');
 }
-*/
-/*
+
+
 for(let val = 1; val <= 4; val++) {
     let min = 0;
     for (let i = 0; i < 4; i++) {  
@@ -37,7 +37,7 @@ for(let val = 15; val <= 15; val++) {
         }
     }
 }
-*/
+
 
 //      MAsyvas masyve
 

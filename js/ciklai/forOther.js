@@ -5,7 +5,7 @@ for (let i = 0; i < words.length; i++) {
     const word = words[i];
     console.log(i, word);
 }
-
+console.log('111')
 // FOR-OF
 for (const word of words) {
     console.log(word);
@@ -81,6 +81,7 @@ for (let h = 1; h <= 12; h++) {
 }
 
 
+console.log('----haker----------');
 
 const hackerMarks = [10, 'Desimt', 8, 2, 100, 6, 4, -7, 3.14];
 let sum = 0;

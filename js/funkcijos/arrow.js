@@ -82,4 +82,4 @@ const antras = () =>'antras';
 
 console.log(antras());
 
-const sum = (_,__)=>_+__;
+//const sum = (_,__)=>_+__;

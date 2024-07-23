@@ -32,7 +32,7 @@ console.log(isNaN(NaN));
 console.log(isNaN(null));
 console.log(isNaN('0'));
 
-console.log('parseInt');
+console.log('parseInt is stringo i teksta');
 console.log(parseInt(152455));
 console.log(parseInt(-1254));
 console.log(parseInt(-12.54545));
@@ -49,6 +49,12 @@ console.log(parseInt('123abc123abc123'));
 console.log(parseInt('1232e5'));
 console.log(parseInt('1.232e5'));
 console.log(parseInt('7e5'));
+
+
+const str = '123'
+const plusStr =+ str
+console.log(typeof plusStr, plusStr) // number, 123
+
 
 const a = '88';
 const b = parseInt('87');

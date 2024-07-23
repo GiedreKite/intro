@@ -512,3 +512,22 @@ console.log(countSheep(0), "");
 console.log(countSheep(1), "1 sheep...");
 console.log(countSheep(2), "1 sheep...2 sheep...");
 console.log(countSheep(3), "1 sheep...2 sheep...3 sheep...")
+
+
+console.log('---------')
+//https://www.codewars.com/kata/5d59576768ba810001f1f8d6/train/javascript 
+
+function quadratic(x1, x2){
+  let x=[]
+  let sprendimas = (x-x1) * (x-x2)
+  if (x2 === 0) { return x = x2}
+  
+  return [1, -(x1+x2), x1*x2];
+}
+
+console.log(quadratic( 0,  1), [1, -1,   0]);
+console.log(quadratic( 1,  1), [1, -2,   1]);
+console.log(quadratic(-4, -9), [1, 13,  36]);
+console.log(quadratic(-5, -4), [1,  9,  20]);
+console.log(quadratic( 4, -9), [1,  5, -36]);
+console.log(quadratic( 5, -4), [1, -1, -20]);

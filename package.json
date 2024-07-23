@@ -4,6 +4,7 @@
   "description": "kazkas apie kazka",
   "main": "index.js",
   "scripts": {
+    "default": "node --watch ./js/default.js",
     "arrow": "node --watch ./js/funkcijos/arrow.js",
     "newmetods": "node --watch ./js/metodai/newmetods.js",
     "methotstring": "node --watch ./js/metodai/methotstring.js",

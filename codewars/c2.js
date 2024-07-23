@@ -1,372 +1,206 @@
-//https://www.codewars.com/kata/5168bb5dfe9a00b126000018/train/javascript
-
-function solution(str){
-  let zodis = '';
-  for (let i = str.length-1; i >= 0; i--) {
-    zodis += str[i];
-  }
-  return zodis;
-}
-
-console.log('wordl');
-  console.log(solution('wordl'));
-
-console.log('-------')
-
-// https://www.codewars.com/kata/59dd3ccdded72fc78b000b25/train/javascript
-/*
-Complete the function which returns the weekday according to the input number:
-
-1 returns "Sunday"
-2 returns "Monday"
-3 returns "Tuesday"
-4 returns "Wednesday"
-5 returns "Thursday"
-6 returns "Friday"
-7 returns "Saturday"
-Otherwise returns "Wrong, please enter a number between 1 and 7"
-*/
-
-function whatday(num) {
-if( num>=8) {
-  return 'Wrong, please enter a number between 1 and 7'
-};
-if (num === 1) {
-  return 'Sunday';
-}
-if (num === 2) {
-  return 'Monday';
-}
-if (num === 3) {
-  return 'Tuesday';
-}
-if (num === 4) {
-  return 'Wednesday';
-}
-if (num === 5) {
-  return 'Thursday';
-}
-if (num === 6) {
-  return 'Friday';
-}
-if (num === 7) {
-  return 'Saturday';
-}
-  if (num !== undefined) {
-  return 'Wrong, please enter a number between 1 and 7'
-};
-    if (typeof num === 'number') {
-  return 'Wrong, please enter a number between 1 and 7'
-};
-}
-
-console.log(whatday(1),'Sunday');
-console.log(whatday(2), 'Monday');
-console.log(whatday(3),'Tuesday');
-console.log(whatday(8),  'Wrong, please enter a number between 1 and 7');
-console.log(whatday('sanday'),  'Wrong, please enter a number between 1 and 7');
-console.log(whatday('undefined'),  'Wrong, please enter a number between 1 and 7');
-
-// https://www.codewars.com/kata/570669d8cb7293a2d1001473/train/javascript
-
-function ifChuckSaysSo(){
-  return !true;
-}
-
-console.log(ifChuckSaysSo(), false);
 
 
-/*
-https://www.codewars.com/kata/55a5befdf16499bffb00007b/train/javascript
-*/
-function add(a,b){
-    return a+b
-}
+    // https://www.codewars.com/kata/5601409514fc93442500010b/train/javascript
+    function betterThanAverage(classPoints, yourPoints) {
+  const count = classPoints.length;
 
-function divide(a,b){
-    return a/b
-}
+  let clas = 0;
+  
+  let vid = clas / count;
 
-function multiply(a,b){
-    return a*b
-}
-
-function mod(a,b){
-    return a%b
-}
-   
-function exponent(a,b){
-    return a**b
-}
-    
-function subt(a,b){
-    return a-b
-}
-
-console.log(add(1,2),3);
-console.log(multiply(1,2),2);
-console.log(divide(2,1),2);
-console.log(mod(1,2),1);
-console.log(exponent(1,2),1);
-console.log(subt(1,2),-1);
-
-function reverseAreyOfNumber(list) {
-  const rev = [];
-
-  for (let i = list.length - 1; i >= 0; i--) {
-  rev.push
-  }
-return '';
+  for (let i = 0; i< classPoints.length; i++) {
+    clas += classPoints[i];
+    vid = clas/count
   } 
-  
-
-console.log(reverseAreyOfNumber([1,2,3,4,5]));
-// https://www.codewars.com/kata/57a083a57cb1f31db7000028/train/javascript
-/*
-    Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
-
-Examples
-n = 0  ==> [1]        # [2^0]
-n = 1  ==> [1, 2]     # [2^0, 2^1]
-n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
-MATHEMATICSFUNDAMENTALS
-*/
-
-
-function powersOfTwo(n){
-  let atsakymas  = [];
-    for (let i =  0; i <= n ; i++) {
-    atsakymas.push(2 ** i);
-  }
-  return atsakymas;
+  if(vid < yourPoints) { 
+    return  true
+  } else { return  false}
 }
 
 
-console.log(powersOfTwo((0), [1]));
-console.log(powersOfTwo((1), [1, 2]));
-console.log(powersOfTwo((4), [1, 2, 4, 8, 16]));
-    
+console.log(betterThanAverage([2, 3], 5, true));
+console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75, true));
+console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9, false));
+console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50, false));
+console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21, false));
 
 
-
-/*
-https://www.codewars.com/kata/57356c55867b9b7a60000bd7/train/javascript
-DESCRIPTION:
-Your task is to create a function that does four basic mathematical operations.
-
-The function should take three arguments - operation(string/char), value1(number), value2(number).
-The function should return result of numbers after applying the chosen operation.
-
-Examples(Operator, value1, value2) --> output
-('+', 4, 7) --> 11
-('-', 15, 18) --> -3
-('*', 5, 5) --> 25
-('/', 49, 7) --> 7
-*/
-//function basicOp(operation, value1, value2){
-//
-//   const veiksmas = String(value1) +operation + String(value2);
-//
-//  return (eval(veiksmas));
-//}
-
-function basicOp(operation, value1, value2){
-  if (operation === '+') {
-    return value1+value2;
-  }
-  if (operation === '-') {
-    return value1-value2;
-  }
-    if (operation === '*') {
-    return value1*value2;
-  }
-    if (operation === '/') {
-    return value1/value2;
-  }
-}
-
-
-    console.log(basicOp("+", 4, 7));
-    console.log(basicOp("-", 15, 18));
-    console.log(basicOp("*", 5, 5));
-    console.log(basicOp("/", 49, 7));
-  
-function calcObj(operation, n1, n2){
- const mathFuncions = {
-  '+' : (a,b) => a+b,
-  '-' : (a,b) => a-b,
-  '/' : (a,b) => a/b,
-  '*' : (a,b) => a*b,
+console.log('----while--')
+// https://www.codewars.com/kata/57216d4bcdd71175d6000560/train/javascript
+function padIt(str,n){
+  let ats = '';
+  while(n===1) { return '*'+str};
+ while(n % 2 === 0){
+ return ats = '*'.repeat(n/2)+str+'*'.repeat(n/2)
  } 
- return mathFuncions[operation](n1,n2);
+  while(n % 2 !== 0){
+  return ats = '*'.repeat(1+n/2)+str+'*'.repeat(n/2)
+ }
+ return ats
 }
 
 
-    console.log(calcObj("+", 4, 7));
-    console.log(calcObj("-", 15, 18));
-    console.log(calcObj("*", 5, 5));
-    console.log(calcObj("/", 49, 7));
+    console.log(padIt("a",1),"*a");
+    console.log(padIt("a",2),"*a*");
+    console.log(padIt("a",3),"**a*");
+    console.log(padIt("a",4),"**a**");
+    console.log(padIt("a",5),"***a**");
 
-    // https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript
+// https://www.codewars.com/kata/570bcd9715944a2c8e000009/train/javascript
 
-const stringToNumber = function(str){
-  return parseFloat(str);
-}
-
-console.log(stringToNumber("1234"),1234)
-console.log(stringToNumber("605"), 605)
-console.log(stringToNumber("1405"),1405)
-console.log(stringToNumber("-7"),  -7)
-
-//https://www.codewars.com/kata/55c28f7304e3eaebef0000da/train/javascript
-
-function createArray(number){
-  var newArray = [];
-  
-  for(var counter = 1; counter <= number; counter ++){
-    newArray.push(counter);
+function sc(floor){
+  let sound = '';
+    if (floor <2) {
+    return ''
   }
+  if (floor <=6 && floor>=2) {
+    return sound +('Aa~ ').repeat(floor-1) +('Pa!') +(' Aa!')
+  }
+    if (floor >6) {
+    return sound + ('Aa~ ').repeat(floor-1) + ('Pa!')
+  }
+}
+
+console.log(sc(2), "Aa~ Pa! Aa!", "good luck!");  
+console.log(sc(6), "Aa~ Aa~ Aa~ Aa~ Aa~ Pa! Aa!", "good luck!"); 
+console.log(sc(7), "Aa~ Aa~ Aa~ Aa~ Aa~ Aa~ Pa!", "good luck!"); 
+console.log(sc(10), "Aa~ Aa~ Aa~ Aa~ Aa~ Aa~ Aa~ Aa~ Aa~ Pa!", "good luck!"); 
+console.log(sc(1), "", "good luck!"); 
+console.log(sc(-1), "", "good luck!"); 
+
+console.log('----------ar sakinyje yra zodis')
+// https://www.codewars.com/kata/56a4addbfd4a55694100001f/train/javascript
+function validateHello(greetings) {
+  const dict = ['hello', 'ciao' , 'salut', 'hallo', 'hola' , 'ahoj' , 'czesc',
+  ];
+  greetings = greetings.toLowerCase();
   
-  return newArray;
-}
-console.log(createArray(1),[1]);
-console.log(createArray(2),[1,2]);
-console.log(createArray(3),[1,2,3]);
-console.log(createArray(4),[1,2,3,4]);
-console.log(createArray(5),[1,2,3,4,5]);
-
-// https://www.codewars.com/kata/55c90cad4b0fe31a7200001f/train/javascript
-
-
-function buildString(...template){
-  return `I like ${template.join(', ')}!`;
-}
-
-console.log(buildString('Cheese','Milk','Chocolate'), 'I like Cheese, Milk, Chocolate!', 'Return the correct String');
-console.log(buildString('Cheese','Milk'), 'I like Cheese, Milk!', 'Return the correct String');
-console.log(buildString('Chocolate'), 'I like Chocolate!', 'Return the correct String');
-  
-// https://www.codewars.com/kata/56aed32a154d33a1f3000018/train/javascript
-
-function myFirstKata(a, b) {
-  if (typeof a !== "number") {
-    return false;
-  } if (typeof b !== 'number') {
-    return false;
-  } else {
-   return a % b + b % a;
-   }
-}
-
-console.log(myFirstKata(3,5),(3 % 5 + 5 % 3));
-console.log(myFirstKata("hello",3),false);
-console.log(myFirstKata(67,"bye"),false);
-console.log(myFirstKata(true,true),false);
-console.log(myFirstKata(314,107),(107 % 314 + 314 % 107));
-console.log(myFirstKata(19483,9),(9 % 19483 + 19483 % 9));
-
-
-// https://www.codewars.com/kata/57158fb92ad763bb180004e7/train/javascript
-
-function rainAmount(mm){
-    if (mm >= 40) {
-      return 'Your plant has had more than enough water for today!';
-    } if (mm < 40) {
-      const liko = 40 - mm;
-      return `You need to give your plant ${liko}mm of water`
+  for (const word of dict) {
+    if (greetings.includes(word)) {
+      return true;
     }
-}
-
-console.log(rainAmount(100));
-console.log(rainAmount(39));
-
-
-//https://www.codewars.com/kata/57202aefe8d6c514300001fd/train/javascript
-console.log('---ternary--')
-
-
-function saleHotdogs(n){
-  const a = n < 5 ? 100 : 0;
-  const b = n>= 5 && n < 10 ? 95 : 0;
-  const c = n>= 10 ? 90 : 0;
-  return n * a + n * b + n * c
-}
-
-console.log(saleHotdogs(  1),  100);
-console.log(saleHotdogs(  4),  400);
-console.log(saleHotdogs(  5),  475);
-console.log(saleHotdogs(  9),  855);
-console.log(saleHotdogs( 10),  900);
-console.log(saleHotdogs(100), 9000);
-
-
-
-
-
-//https://www.codewars.com/kata/571effabb625ed9b0600107a/train/javascript
-
-function getLength(arr){
-  return arr.length;
-}
-function getFirst(arr){
-  return arr[0];
-}
-function getLast(arr){
-  return arr[arr.length -1];
-}
-function pushElement(arr){
-  var el=1;
-  arr.push(el);
-  return arr
-}
-function popElement(arr){ 
-  arr.pop();
-  return arr;
-}
-
-console.log(getLength([1,2,3]),3);
-console.log(getFirst([1,2,3]),1);
-console.log(getLast([1,2,3]),3);
-console.log(pushElement([1,2,3]).length,4);
-console.log(popElement([1,2,3]).length,2);
-
-// https://www.codewars.com/kata/55cb854deb36f11f130000e1/train/javascript
-
-function weatherInfo (temp) {
-  var c = convertToCelsius(temp)
-  if (c < 0)
-    return (c + " is freezing temperature")
-  else
-    return (c + " is above freezing temperature")
-}
-
-function convertToCelsius (temperature) {
-  var celsius = (temperature - 32) * (5/9)
-  return Math.ceil(celsius)
-}
-
-
-console.log (weatherInfo(50), '10 is above freezing temperature')
-console.log (weatherInfo(23),  '-5 is freezing temperature')
-
-// https://www.codewars.com/kata/5861d28f124b35723e00005e/train/javascript
-const zeroFuel = (distanceToPump, mpg, fuelLeft) =>  (distanceToPump / mpg) <= fuelLeft ? true : false
-;
-
-console.log(zeroFuel(50, 25, 2), true);
-console.log(zeroFuel(100, 50, 1), false);
-
-// https://www.codewars.com/kata/5704aea738428f4d30000914/train/javascript
-function tripleTrouble(one, two, three){
-  let trip = ''; 
-  for (let i=0; i<one.length; i++) {
-    trip += one[i] + two[i] + three[i];
   }
-  return trip
+  return false;
+}
+// const validateHello = greetings => /hello|ciao|salut|hallo|hola|ahoj|czesc/i.test(greetings)
+console.log(validateHello('ahoj'), true);
+console.log(validateHello('meh'), false);
+console.log(validateHello('ciao'), true);
+console.log(validateHello('ciao sako tau'), true);
+console.log(validateHello('Hallowen'), true);
+
+console.log('-------is nan')
+//https://www.codewars.com/kata/5722fd3ab7162a3a4500031f/train/javascript
+
+function whatNumberIsIt(n){
+  if (n === Infinity) {
+    return 'Input number is Number.POSITIVE_INFINITY'
+  } if (n === -Infinity) {
+    return 'Input number is Number.NEGATIVE_INFINITY'
+  } if (isNaN(n) === true) {
+    return 'Input number is Number.NaN'
+  } if (n === 5e-324) {
+    return 'Input number is Number.MIN_VALUE'
+  } if (n === 1.7976931348623157e+308) {
+    return 'Input number is Number.MAX_VALUE'
+  } else {
+    return `Input number is ${n}`
+  }
 }
 
-console.log(tripleTrouble("aaa","bbb","ccc"), "abcabcabc");
-console.log(tripleTrouble("aaaaaa","bbbbbb","cccccc"), "abcabcabcabcabcabc");
-console.log(tripleTrouble("burn", "reds", "roll"), "brrueordlnsl");
-console.log(tripleTrouble("Sea","urn","pms"), "Supermans"); 
-console.log(tripleTrouble("LLh","euo","xtr"), "LexLuthor");
+console.log(whatNumberIsIt(1/0),"Input number is Number.POSITIVE_INFINITY");
+console.log(whatNumberIsIt(100),"Input number is 100");
+console.log(whatNumberIsIt(1.7976931348623157e+308),"Input number is Number.MAX_VALUE");
+console.log(whatNumberIsIt(5e-324),"Input number is Number.MIN_VALUE");
+console.log(whatNumberIsIt(-Number.MAX_VALUE*2),"Input number is Number.NEGATIVE_INFINITY");
+console.log(whatNumberIsIt(NaN),"Input number is Number.NaN");
+console.log(whatNumberIsIt(Infinity+1),"Input number is Number.POSITIVE_INFINITY");
+
+
+
+    console.log('------pakeisti raides kitomis')
+function replace(s){
+ats = '';
+for(let i =0;i<s.length;i++) {
+  if (s[i] === 'a' )
+    ats += '!' 
+  else if (s[i] === 'e' )
+    ats += '!'
+  else if (s[i] === 'i')
+    ats += '!'
+  else if (s[i] === 'o') 
+    ats += '!'
+  else if (s[i] === 'u') 
+    ats += '!'
+  else if (s[i] === 'A') 
+    ats += '!'
+  else if (s[i] === 'E') 
+    ats += '!'
+  else if (s[i] === 'I' ) 
+    ats += '!'
+  else if (s[i] === 'O' ) 
+    ats += '!'
+  else if (s[i] === 'U') 
+    ats += '!'
+  else 
+  ats += s[i]
+  }
+  return ats 
+}
+
+
+/*
+function replace(s){
+   return s.replace(/[aeiouAEIOU]/g,'!');
+}
+
+*/
+console.log(replace("Hi!") , "H!!")
+console.log(replace("!Hi! Hi!") , "!H!! H!!")
+console.log(replace("aeiou") , "!!!!!")
+console.log(replace("ABCDE") , "!BCD!")
+console.log(replace("WrmARZ") , "W!!ARZ")
+
+
+
+// https://www.codewars.com/kata/55d24f55d7dd296eb9000030/train/javascript
+function summation (num) {
+  let sum = 0;
+  for (let i = 0; i<=num; i++) {
+    sum += 1 * (i); 
+  }
+  return sum 
+}
+
+console.log(summation(1),  1);
+console.log(summation(2),  3);
+console.log(summation(8), 36);
+
+// https://www.codewars.com/kata/5865918c6b569962950002a1/train/javascript
+
+function strCount (str, letter){  
+  let sum = 0;
+  for (let i = 0; i<str.length; i++) {
+    if (str[i] === letter) 
+     sum += 1;
+  } return sum
+}
+
+    console.log(strCount('Hello', 'o'), 1);
+    console.log(strCount('Hello', 'l'), 2);
+    console.log(strCount('',      'z'), 0);
+
+    
+ // https://www.codewars.com/kata/57280481e8118511f7000ffa/train/javascript
+
+ function splitAndMerge(string, separator) {
+  toString(string);
+    return  string.split('').join(separator).replaceAll('. .', ' ').replaceAll(', ,', ' ').replaceAll('- -', ' ').replaceAll('   ', ' ');
+  };
+  
+  
+
+console.log(splitAndMerge("My name is John"," ") , "M y n a m e i s J o h n");
+console.log(splitAndMerge("My name is John","-") , "M-y n-a-m-e i-s J-o-h-n");
+console.log(splitAndMerge("Hello World!",".") , "H.e.l.l.o W.o.r.l.d.!");
+console.log(splitAndMerge("Hello World!",",") , "H,e,l,l,o W,o,r,l,d,!");

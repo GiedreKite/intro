@@ -94,7 +94,7 @@ function food () {
 //const sentence2 = `Valgysi ${name1} porciju kiekis ${count}`
 //console.log(sentence2);
 
-
+console.log('---')
 const {name1:valgis, count:kiekis} = food();
 const sentence2 = `Valgysi ${valgis} porciju kiekis ${kiekis}`
 console.log(sentence2);
@@ -104,7 +104,7 @@ function drinks(...list){
 }
 
 console.log(drinks('a','b', 'c'))
-
+console.log('---')
 function iLike(name, ...list) {
     return `${name} megsta ${list.length} spalvas.`;
 }
@@ -112,14 +112,14 @@ function iLike(name, ...list) {
 console.log(iLike('Petras'));
 console.log(iLike('Jonas', 'red', 'blue'));
 console.log(iLike('Maryte', 'white', 'black', '50greys'));
-
+console.log('---')
 function nextFunc(a, b, c, ...restParams) {
     return null;
 }
 
 console.log(Math.max(10, 7));
 console.log(Math.min(10, 7));
-
+console.log('---')
 const marks = [10, 2, 8, 4, 6];
 console.log(Math.max(...marks));
 console.log(Math.min(...marks));
