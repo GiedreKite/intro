@@ -365,4 +365,13 @@ console.log(tripleTrouble("aaa","bbb","ccc"), "abcabcabc");
 console.log(tripleTrouble("aaaaaa","bbbbbb","cccccc"), "abcabcabcabcabcabc");
 console.log(tripleTrouble("burn", "reds", "roll"), "brrueordlnsl");
 console.log(tripleTrouble("Sea","urn","pms"), "Supermans"); 
-console.log(tripleTrouble("LLh","euo","xtr"), "LexLuthor");
+console.log(tripleTrouble("LLh", "euo", "xtr"), "LexLuthor");
+
+function position(letter){
+ const lettersOfAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  return `Position of alphabet: ${lettersOfAlphabet.indexOf(letter) +1}`
+}
+
+ assert.strictEqual(position("a"),"Position of alphabet: 1");
+    assert.strictEqual(position("z"),"Position of alphabet: 26");
+    assert.strictEqual(position("e"),"Position of alphabet: 5");
